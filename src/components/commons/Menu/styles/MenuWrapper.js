@@ -27,6 +27,7 @@ MenuWrapper.CentralSide = styled.div`
   justify-content: space-between;
   margin-top: 17px;
   border-top: 1px solid #88989e;
+  border-bottom: 1px solid #88989e;
   padding: 12px;
   a {
     text-align: center;
