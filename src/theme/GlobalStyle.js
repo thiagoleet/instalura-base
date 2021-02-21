@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
 
   ${normalize}
 
+  a {
+    cursor: pointer;
+  }
+
   body {
     margin: 0;
     padding: 0;

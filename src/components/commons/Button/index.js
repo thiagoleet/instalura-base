@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components";
-import { getColor, getContrastText } from "../../../helpers";
-import { TextStyleVariantsMap } from "../../foundation/Text";
+import {
+  getColor,
+  getContrastText,
+  breakpointsMedia,
+} from "../../../theme/utils";
+import { TextStyleVariants } from "../../foundation/Text";
 
 const ButtonGhost = css`
   background-color: transparent;
@@ -20,7 +24,17 @@ export const Button = styled.button`
   opacity: 1;
   transition: ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
-  ${TextStyleVariantsMap.paragraph1}
+
+  ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariants.smallestException}
+    `,
+    md: css`
+      padding: 12px 43px;
+      ${TextStyleVariants.paragraph1}
+    `,
+  })}
+
   ${({ $ghost }) => ($ghost ? ButtonGhost : ButtonDefault)}
   &:hover,
   &:focus {
