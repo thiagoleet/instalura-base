@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuWrapper = styled.nav`
+const MenuWrapper = styled.nav`
   font-family: "Rubik", sans-serif;
   display: flex;
   align-items: center;
@@ -51,3 +51,5 @@ MenuWrapper.RightSide = styled.div`
   order: 1;
   justify-content: flex-end;
 `;
+
+export { MenuWrapper };

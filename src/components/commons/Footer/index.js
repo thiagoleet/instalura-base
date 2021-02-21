@@ -24,7 +24,7 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-export default function Footer(props) {
+const Footer = (props) => {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
@@ -42,4 +42,6 @@ export default function Footer(props) {
       </p>
     </FooterWrapper>
   );
-}
+};
+
+export default Footer;
