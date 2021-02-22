@@ -1,11 +1,11 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 import {
   getColor,
   getContrastText,
   breakpointsMedia,
   propToStyle,
-} from "../../../theme/utils";
-import { TextStyleVariants } from "../../foundation/Text";
+} from '../../../theme/utils';
+import { TextStyleVariants } from '../../foundation/Text';
 
 const ButtonGhost = css`
   background-color: transparent;
@@ -31,7 +31,7 @@ const breakpoints = {
   },
 };
 
-export const Button = styled.button`
+const Button = styled.button`
   border: 0;
   cursor: pointer;
   padding: 12px 26px;
@@ -48,6 +48,8 @@ export const Button = styled.button`
     opacity: 0.5;
   }
 
-  ${propToStyle("margin")}
-  ${propToStyle("display")}
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `;
+
+export default Button;

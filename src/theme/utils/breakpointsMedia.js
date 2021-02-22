@@ -1,7 +1,8 @@
-import { breakpoints } from "../breakpoints";
-import { css } from "styled-components";
+/* eslint-disable comma-dangle */
+import { css } from 'styled-components';
+import breakpoints from '../breakpoints';
 
-export function breakpointsMedia(cssByBreakpoint) {
+export default function breakpointsMedia(cssByBreakpoint) {
   const breakpointNames = Object.keys(breakpoints);
   return breakpointNames
     .filter((breakpointName) => Boolean(cssByBreakpoint[breakpointName]))

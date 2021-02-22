@@ -1,7 +1,7 @@
-import get from "lodash/get";
-import { css } from "styled-components";
+import get from 'lodash/get';
+import { css } from 'styled-components';
 
-export const getTypographyVariant = (theme, variant = "paragraph1") =>
+export const getTypographyVariant = (theme, variant = 'paragraph1') =>
   get(theme, `typographyVariants.${variant}`);
 
 export const getTextStyleVariant = (typographyVariant) => css`

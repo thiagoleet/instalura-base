@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   padding: 14px;
@@ -24,24 +25,21 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-const Footer = (props) => {
-  return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <FooterWrapper {...props}>
+const Footer = (props) => (
+  <FooterWrapper {...props}>
+    <a href="https://www.alura.com.br/">
+      <img
+        src="https://www.alura.com.br/assets/img/alura-logo.svg"
+        alt="Logo Alura"
+      />
+    </a>
+    <p>
+      Orgulhosamente criado durante o
       <a href="https://www.alura.com.br/">
-        <img
-          src="https://www.alura.com.br/assets/img/alura-logo.svg"
-          alt="Logo Alura"
-        />
+        <span>Bootcamp Alura JAM Stack</span>
       </a>
-      <p>
-        Orgulhosamente criado durante o{" "}
-        <a href="https://www.alura.com.br/">
-          <span>Bootcamp Alura JAM Stack</span>
-        </a>
-      </p>
-    </FooterWrapper>
-  );
-};
+    </p>
+  </FooterWrapper>
+);
 
 export default Footer;

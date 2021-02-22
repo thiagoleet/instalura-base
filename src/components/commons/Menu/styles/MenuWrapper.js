@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import breakpoints from "./_breakpoints";
 
-export const MenuWrapper = styled.nav`
+const MenuWrapper = styled.nav`
   font-family: "Rubik", sans-serif;
   display: flex;
   align-items: center;
@@ -59,3 +59,5 @@ MenuWrapper.RightSide = styled.div`
   justify-content: flex-end;
   ${breakpoints.rightSide.breakpoint}
 `;
+
+export default MenuWrapper;
