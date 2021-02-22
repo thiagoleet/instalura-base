@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { getColor, getTextStyleVariant } from "../../../theme/utils";
+import {
+  getColor,
+  getTextStyleVariant,
+  propToStyle,
+} from "../../../theme/utils";
 
 const paragraph1 = css`
   ${({ theme }) => getTextStyleVariant(theme.typographyVariants.paragraph1)}
@@ -35,6 +39,9 @@ export const TextStyleVariants = {
 
 const TextBase = styled.span`
   ${({ variant }) => TextStyleVariants[variant]}
+  ${propToStyle("textAlign")}  
+  ${propToStyle("margin")}  
+  ${propToStyle("display")}  
   color: ${getColor};
 `;
 
@@ -48,7 +55,14 @@ const Text = ({ tag, variant, children, ...props }) => {
 
 Text.propTypes = {
   tag: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "p", "li", "a", "span"]),
-  variant: PropTypes.oneOf(["paragraph1", "smallestException"]),
+  variant: PropTypes.oneOf([
+    "paragraph1",
+    "paragraph2",
+    "smallestException",
+    "subTitle",
+    "title",
+    "titleXS",
+  ]),
   children: PropTypes.node.isRequired,
 };
 

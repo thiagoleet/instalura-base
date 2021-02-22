@@ -20,22 +20,22 @@ const Menu = () => {
     },
   ];
 
+  const linksMenu = links.map((link) => {
+    return (
+      <li key={link.url}>
+        <Text tag="a" variant="smallestException" href={link.url}>
+          {link.texto}
+        </Text>
+      </li>
+    );
+  });
+
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>
-      <MenuWrapper.CentralSide>
-        {links.map((link) => {
-          return (
-            <li key={link.url}>
-              <Text tag="a" variant="smallestException" href={link.url}>
-                {link.texto}
-              </Text>
-            </li>
-          );
-        })}
-      </MenuWrapper.CentralSide>
+      <MenuWrapper.CentralSide>{linksMenu}</MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
         <Button $ghost variant="secondary.main">
           Entrar

@@ -3,6 +3,7 @@ import {
   getColor,
   getContrastText,
   breakpointsMedia,
+  propToStyle,
 } from "../../../theme/utils";
 import { TextStyleVariants } from "../../foundation/Text";
 
@@ -40,4 +41,7 @@ export const Button = styled.button`
   &:focus {
     opacity: 0.5;
   }
+
+  ${propToStyle("margin")}
+  ${propToStyle("display")}
 `;
