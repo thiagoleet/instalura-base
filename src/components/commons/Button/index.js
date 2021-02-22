@@ -17,6 +17,20 @@ const ButtonDefault = css`
   color: ${getContrastText};
 `;
 
+const breakpoints = {
+  button: {
+    breakpoint: breakpointsMedia({
+      xs: css`
+        ${TextStyleVariants.smallestException}
+      `,
+      md: css`
+        padding: 12px 43px;
+        ${TextStyleVariants.paragraph1}
+      `,
+    }),
+  },
+};
+
 export const Button = styled.button`
   border: 0;
   cursor: pointer;
@@ -26,15 +40,7 @@ export const Button = styled.button`
   transition: ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
 
-  ${breakpointsMedia({
-    xs: css`
-      ${TextStyleVariants.smallestException}
-    `,
-    md: css`
-      padding: 12px 43px;
-      ${TextStyleVariants.paragraph1}
-    `,
-  })}
+  ${breakpoints.button.breakpoint}
 
   ${({ $ghost }) => ($ghost ? ButtonGhost : ButtonDefault)}
   &:hover,
