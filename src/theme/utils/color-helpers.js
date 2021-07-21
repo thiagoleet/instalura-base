@@ -1,4 +1,4 @@
-import get from "lodash/get";
+import get from 'lodash/get';
 
 export const getColor = ({ theme, variant }) =>
   get(theme, `colors.${variant}.color`);

@@ -1,34 +1,32 @@
-import React from "react";
-import Button from "../Button";
-import Logo from "../../../theme/Logo";
-import MenuWrapper from "./styles/MenuWrapper";
-import Text from "../../foundation/Text";
+import React from 'react';
+import Button from '../Button';
+import Logo from '../../../theme/Logo';
+import MenuWrapper from './styles/MenuWrapper';
+import Text from '../../foundation/Text';
 
 const Menu = () => {
   const links = [
     {
-      texto: "Home",
-      url: "/",
+      texto: 'Home',
+      url: '/',
     },
     {
-      texto: "Perguntas Frequentes",
-      url: "/faq",
+      texto: 'Perguntas Frequentes',
+      url: '/faq',
     },
     {
-      texto: "Sobre",
-      url: "/sobre",
+      texto: 'Sobre',
+      url: '/sobre',
     },
   ];
 
-  const linksMenu = links.map((link) => {
-    return (
-      <li key={link.url}>
-        <Text tag="a" variant="smallestException" href={link.url}>
-          {link.texto}
-        </Text>
-      </li>
-    );
-  });
+  const linksMenu = links.map((link) => (
+    <li key={link.url}>
+      <Text tag="a" variant="smallestException" href={link.url}>
+        {link.texto}
+      </Text>
+    </li>
+  ));
 
   return (
     <MenuWrapper>

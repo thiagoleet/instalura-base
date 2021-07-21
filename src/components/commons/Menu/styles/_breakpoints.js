@@ -1,6 +1,6 @@
-import { css } from "styled-components";
-import { breakpointsMedia } from "../../../../theme/utils";
-import { TextStyleVariants } from "../../../foundation/Text";
+import { css } from 'styled-components';
+import { breakpointsMedia } from '../../../../theme/utils';
+import { TextStyleVariants } from '../../../foundation/Text';
 
 const menuWrapper = {
   breakpoint: breakpointsMedia({

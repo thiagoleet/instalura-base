@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import breakpoints from "./_breakpoints";
+import styled from 'styled-components';
+import breakpoints from './_breakpoints';
 
 const MenuWrapper = styled.nav`
   font-family: "Rubik", sans-serif;
